@@ -1,0 +1,170 @@
+/* Default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+}
+
+header {
+    background-color: blue;
+    background-image: url("images/pattern-bg-desktop.png");
+    background-size: 100% 100%;
+    height: 40vh;
+    color: white;
+    text-align: center;
+    min-height: 300px;
+}
+
+h1 {
+    padding: 50px 0 30px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border: 0;
+}
+
+input[type="text"] {
+    width: 70%;
+    max-width: 500px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px 0 0 20px;
+}
+
+input[type="image"] {
+    background-color: var(--Very-Dark-Gray);
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    width: 50px;
+    height: 100%;
+    flex: none;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="image"]:hover {
+    background: hsl(0, 0%, 27%);
+}
+
+label {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column; /* Changed to column layout for smaller screens */
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px 10px;
+    margin-top: -80px;
+    width: 75%;
+    margin: -80px 0px 0;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 5;
+    text-align: start;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.main_col {
+    margin: 10px 0;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.main_col span {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.main_col:last-child {
+    border: 0;
+}
+
+.main_col_head {
+    color: var(--Dark-Gray);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+#map {
+    height: 100vh; /* Adjusted height for smaller screens */
+    position: relative;
+    z-index: 1;
+    margin-top: 0px;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px 0;
+    background-color: rgb(242, 247, 247);
+    font-weight: 500;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    header {
+        height: 30vh; /* Reduced height for smaller screens */
+    }
+
+    h1 {
+        padding: 30px 0 20px; /* Reduced padding for smaller screens */
+    }
+
+    form {
+        flex-direction: column; /* Changed to column layout for smaller screens */
+        align-items: center; /* Center align for smaller screens */
+    }
+
+    input[type="text"] {
+        width: 90%; /* Full width for smaller screens */
+        max-width: 100%; /* Full width for smaller screens */
+        border-radius: 20px; /* Keep border radius consistent */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+    }
+
+    input[type="image"] {
+        border-radius: 20px; /* Keep border radius consistent */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+    }
+
+    .main {
+        width: 90%; /* Adjusted width for smaller screens */
+        margin-left: auto; /* Center align for smaller screens */
+        margin-right: auto; /* Center align for smaller screens */
+    }
+
+    .main_col {
+        margin-left: 2rem; /* Reduced margin for smaller screens */
+        margin-right: 2rem; /* Reduced margin for smaller screens */
+    }
+
+    #map {
+        height: 70vh; /* Reduced height for smaller screens */
+    }
+}
